@@ -1,24 +1,25 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Building, Users } from "lucide-react"; // Importei Users
+import { ArrowRight, MapPin, Building, Users, QrCode } from "lucide-react"; // Importei Users
 
-import parqueLogo from "../assets/parque.png"; 
+import parqueLogo from "../assets/parque.png";
 import itecpbLogo from "../assets/itecpb.png";
+import qrcodeParque from "../assets/qrcodeParque.jpeg";
 
 const Welcome = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-[#0a1120] overflow-hidden p-6 relative">
-      
+
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[120px] translate-x-1/3 translate-y-1/3 pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-lg flex flex-col items-center gap-10">
-        
+
         <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl w-full flex items-center justify-center gap-6 animate-fade-down shadow-2xl">
           <img src={parqueLogo} alt="Logo Parque" className="h-16 md:h-20 w-auto object-contain rounded-md" />
-          <div className="w-[1px] h-12 bg-white/20" /> 
+          <div className="w-[1px] h-12 bg-white/20" />
           <img src={itecpbLogo} alt="Logo ITECPB" className="h-12 md:h-16 w-auto object-contain" />
         </div>
 
@@ -35,9 +36,9 @@ const Welcome = () => {
         </div>
 
         <div className="w-full flex flex-col gap-4 animate-fade-up px-4">
-          
-          <Button 
-            size="lg" 
+
+          <Button
+            size="lg"
             onClick={() => navigate("/salas")}
             className="w-full h-16 text-xl font-bold bg-red-600 hover:bg-red-700 text-white rounded-2xl shadow-[0_0_30px_rgba(220,38,38,0.4)] transition-all duration-300 border border-red-500/50"
           >
@@ -45,8 +46,8 @@ const Welcome = () => {
           </Button>
 
           {/* NOVO BOTÃO: Buscar Pessoas */}
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             onClick={() => navigate("/pessoas")}
             className="w-full h-14 text-lg font-bold bg-[#1e293b] hover:bg-[#334155] text-white rounded-2xl transition-all duration-300 border border-slate-700 shadow-lg"
           >
@@ -54,8 +55,8 @@ const Welcome = () => {
             Buscar Profissional
           </Button>
 
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             variant="outline"
             onClick={() => navigate("/ancoras")}
             className="w-full h-14 text-lg font-bold border-2 border-slate-600 text-slate-300 hover:bg-white/5 hover:text-white hover:border-blue-400 rounded-2xl transition-all duration-300"
@@ -69,6 +70,25 @@ const Welcome = () => {
         <div className="flex items-center gap-2 text-slate-500 text-xs md:text-sm font-mono tracking-widest uppercase opacity-60 mt-4">
           <MapPin className="w-4 h-4" />
           <span>PATO BRANCO / PR</span>
+        </div>
+
+
+        <div className="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-3xl flex flex-col items-center gap-3 animate-fade-up shadow-2xl max-w-[220px]">
+          <div className="bg-white p-2 rounded-2xl">
+            <img
+              src={qrcodeParque}
+              alt="QR Code - Pesquisa de satisfação do Parque Tecnológico"
+              className="h-32 w-32 object-contain rounded-xl"
+            />
+          </div>
+          <div className="text-center">
+            <p className="text-white font-bold text-md leading-tight">
+              Sua visita importa.
+            </p>
+            <p className="text-white/70 text-md leading-snug mt-1">
+              Aponte a câmera e ajude a melhorar o Parque Tecnológico.
+            </p>
+          </div>
         </div>
       </div>
     </div>

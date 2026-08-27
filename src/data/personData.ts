@@ -3,9 +3,9 @@
 export interface PersonInfo {
   id: number;
   name: string;
-  role?: string;      
-  company: string;    
-  roomId: number;     
+  role?: string;
+  company: string;
+  roomId: number;
 }
 
 export const personData: PersonInfo[] = [
@@ -18,20 +18,20 @@ export const personData: PersonInfo[] = [
   { id: 6, name: "Stefany Maith Duarte dos Santos", company: "Rock Jobs", roomId: 26 },
 
   // --- SMCTI / ITECPB (Sala 11 / e outras) ---
-  { id: 7, name: "Nelito Zanmaria", company: "ITECPB", roomId: 11},
+  { id: 7, name: "Nelito Zanmaria", company: "ITECPB", roomId: 11 },
   { id: 8, name: "Rosiclei Caldato Dalagnol", company: "SMCTI", roomId: 8 },
   { id: 9, name: "Ana Claudia Marques", company: "ITECPB", roomId: 11 },
 
   // --- NOVOS MEMBROS SMCTI (Salas 6, 7 e 8) ---
-  { id: 47, name: "Ricardo Weich", company: "SMCTI", roomId: 6 },
-  { id: 48, name: "Tony Evaristo", company: "SMCTI", roomId: 6 },
-  { id: 49, name: "Isaque Santana", company: "SMCTI", roomId: 6 },
-  { id: 50, name: "Ana Laura Maieski", company: "SMCTI", roomId: 7 }, // Movido para Sala 7 (Laboratório 3D)
+  //{ id: 47, name: "Ricardo Weich", company: "SMCTI", roomId: 6 },
+  { id: 48, name: "Humberto Sabbi de Almeida", company: "SMCTI", roomId: 6 },
+  { id: 49, name: "Danilo Pietrobon Neto", company: "SMCTI", roomId: 6 },
+  { id: 50, name: "Vinicius Ballan", company: "SMCTI", roomId: 6 },
   { id: 51, name: "Leila Voss", company: "SMCTI", roomId: 8 },
   { id: 52, name: "Douglas H. Batista", company: "SMCTI", roomId: 8 },
   { id: 53, name: "Iuris Maia", company: "SMCTI", roomId: 8 },
-  { id: 54, name: "Grazieli Cacciatori", company: "SMCTI", roomId: 6 },
-  { id: 55, name: "Helmuth Kuhl", company: "SMCTI", roomId: 6 },
+  { id: 54, name: "Lucas Bordin", company: "SMCTI", roomId: 6 },
+  { id: 55, name: "Helmuth Kuhl", company: "SMCTI", roomId: 7 },
 
   // --- SAFE EDUCA / EDUCAÇÃO FINANCEIRA (Sala 19) ---
   { id: 11, name: "Pedro Henrique Baldin Coelho", company: "Safe Educa", roomId: 19 },
